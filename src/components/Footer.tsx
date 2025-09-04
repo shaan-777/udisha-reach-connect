@@ -21,7 +21,10 @@ export const Footer = () => {
       title: "Legal",
       items: [
         { text: "Privacy Policy", link: "#" },
-        { text: "Terms of Service", link: "#" },
+        { 
+          text: "License", 
+          link: "/SPICE%20+%20Part%20B_Section%208%20License_AB4248776.pdf" // 🔥 Updated
+        },
         { text: "Grievance Redressal", link: "#" }
       ]
     },
@@ -53,6 +56,8 @@ export const Footer = () => {
                     ) : (
                       <a
                         href={item.link}
+                        target={item.link.endsWith('.pdf') ? '_blank' : '_self'} // 🔥 Opens PDF in new tab
+                        rel="noopener noreferrer"
                         className="text-gray-300 hover:text-udisha transition-colors duration-300 block"
                       >
                         {item.text}
