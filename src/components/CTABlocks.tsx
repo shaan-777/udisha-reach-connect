@@ -11,7 +11,7 @@ export const CTABlocks = () => {
       title: "Volunteer Banein",
       description: "Local volunteers, SHGs, NGOs ka swagat hai—training aur digital toolkit uplabdh hai.",
       buttonText: "Join Team",
-      buttonLink: "#volunteer",
+      buttonLink: "https://forms.gle/SZ7ajMjvXBhSPTEK6", // 🔥 Updated link
       isPrimary: false
     },
     {
@@ -40,6 +40,8 @@ export const CTABlocks = () => {
               </p>
               <a
                 href={block.buttonLink}
+                target={block.buttonLink.startsWith('http') ? '_blank' : '_self'} // 🔥 Open link in new tab
+                rel="noopener noreferrer"
                 className={`inline-block px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
                   block.isPrimary
                     ? 'bg-udisha text-white hover:bg-udisha-dark shadow-lg hover:shadow-xl transform hover:-translate-y-1'
